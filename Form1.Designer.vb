@@ -23,29 +23,29 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Dim IdLabel As System.Windows.Forms.Label
         Dim NombreLabel As System.Windows.Forms.Label
         Dim DniLabel As System.Windows.Forms.Label
         Dim DomicilioLabel As System.Windows.Forms.Label
         Dim SexoLabel As System.Windows.Forms.Label
         Dim Estado_civilLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.DatosDbDataSet = New DatosPersonales.datosDbDataSet()
         Me.DatosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DatosTableAdapter = New DatosPersonales.datosDbDataSetTableAdapters.datosTableAdapter()
         Me.TableAdapterManager = New DatosPersonales.datosDbDataSetTableAdapters.TableAdapterManager()
         Me.DatosBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.DatosBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.IdTextBox = New System.Windows.Forms.TextBox()
         Me.NombreTextBox = New System.Windows.Forms.TextBox()
@@ -73,6 +73,60 @@ Partial Class Form1
         Me.DatosBindingNavigator.SuspendLayout()
         CType(Me.DatosDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'IdLabel
+        '
+        IdLabel.AutoSize = True
+        IdLabel.Location = New System.Drawing.Point(44, 40)
+        IdLabel.Name = "IdLabel"
+        IdLabel.Size = New System.Drawing.Size(19, 13)
+        IdLabel.TabIndex = 1
+        IdLabel.Text = "Id:"
+        '
+        'NombreLabel
+        '
+        NombreLabel.AutoSize = True
+        NombreLabel.Location = New System.Drawing.Point(44, 66)
+        NombreLabel.Name = "NombreLabel"
+        NombreLabel.Size = New System.Drawing.Size(45, 13)
+        NombreLabel.TabIndex = 3
+        NombreLabel.Text = "nombre:"
+        '
+        'DniLabel
+        '
+        DniLabel.AutoSize = True
+        DniLabel.Location = New System.Drawing.Point(44, 92)
+        DniLabel.Name = "DniLabel"
+        DniLabel.Size = New System.Drawing.Size(24, 13)
+        DniLabel.TabIndex = 5
+        DniLabel.Text = "dni:"
+        '
+        'DomicilioLabel
+        '
+        DomicilioLabel.AutoSize = True
+        DomicilioLabel.Location = New System.Drawing.Point(44, 118)
+        DomicilioLabel.Name = "DomicilioLabel"
+        DomicilioLabel.Size = New System.Drawing.Size(50, 13)
+        DomicilioLabel.TabIndex = 7
+        DomicilioLabel.Text = "domicilio:"
+        '
+        'SexoLabel
+        '
+        SexoLabel.AutoSize = True
+        SexoLabel.Location = New System.Drawing.Point(44, 144)
+        SexoLabel.Name = "SexoLabel"
+        SexoLabel.Size = New System.Drawing.Size(32, 13)
+        SexoLabel.TabIndex = 9
+        SexoLabel.Text = "sexo:"
+        '
+        'Estado_civilLabel
+        '
+        Estado_civilLabel.AutoSize = True
+        Estado_civilLabel.Location = New System.Drawing.Point(44, 170)
+        Estado_civilLabel.Name = "Estado_civilLabel"
+        Estado_civilLabel.Size = New System.Drawing.Size(63, 13)
+        Estado_civilLabel.TabIndex = 11
+        Estado_civilLabel.Text = "estado civil:"
         '
         'DatosDbDataSet
         '
@@ -112,6 +166,31 @@ Partial Class Form1
         Me.DatosBindingNavigator.TabIndex = 0
         Me.DatosBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -139,22 +218,16 @@ Partial Class Form1
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Posición"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 15)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -162,7 +235,7 @@ Partial Class Form1
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Mover siguiente"
         '
         'BindingNavigatorMoveLastItem
@@ -171,48 +244,21 @@ Partial Class Form1
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Mover último"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'DatosBindingNavigatorSaveItem
         '
         Me.DatosBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.DatosBindingNavigatorSaveItem.Image = CType(resources.GetObject("DatosBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.DatosBindingNavigatorSaveItem.Name = "DatosBindingNavigatorSaveItem"
-        Me.DatosBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.DatosBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.DatosBindingNavigatorSaveItem.Text = "Guardar datos"
-        '
-        'IdLabel
-        '
-        IdLabel.AutoSize = True
-        IdLabel.Location = New System.Drawing.Point(44, 40)
-        IdLabel.Name = "IdLabel"
-        IdLabel.Size = New System.Drawing.Size(19, 13)
-        IdLabel.TabIndex = 1
-        IdLabel.Text = "Id:"
         '
         'IdTextBox
         '
@@ -222,15 +268,6 @@ Partial Class Form1
         Me.IdTextBox.Size = New System.Drawing.Size(100, 20)
         Me.IdTextBox.TabIndex = 2
         '
-        'NombreLabel
-        '
-        NombreLabel.AutoSize = True
-        NombreLabel.Location = New System.Drawing.Point(44, 66)
-        NombreLabel.Name = "NombreLabel"
-        NombreLabel.Size = New System.Drawing.Size(45, 13)
-        NombreLabel.TabIndex = 3
-        NombreLabel.Text = "nombre:"
-        '
         'NombreTextBox
         '
         Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DatosBindingSource, "nombre", True))
@@ -238,15 +275,6 @@ Partial Class Form1
         Me.NombreTextBox.Name = "NombreTextBox"
         Me.NombreTextBox.Size = New System.Drawing.Size(100, 20)
         Me.NombreTextBox.TabIndex = 4
-        '
-        'DniLabel
-        '
-        DniLabel.AutoSize = True
-        DniLabel.Location = New System.Drawing.Point(44, 92)
-        DniLabel.Name = "DniLabel"
-        DniLabel.Size = New System.Drawing.Size(24, 13)
-        DniLabel.TabIndex = 5
-        DniLabel.Text = "dni:"
         '
         'DniTextBox
         '
@@ -256,15 +284,6 @@ Partial Class Form1
         Me.DniTextBox.Size = New System.Drawing.Size(100, 20)
         Me.DniTextBox.TabIndex = 6
         '
-        'DomicilioLabel
-        '
-        DomicilioLabel.AutoSize = True
-        DomicilioLabel.Location = New System.Drawing.Point(44, 118)
-        DomicilioLabel.Name = "DomicilioLabel"
-        DomicilioLabel.Size = New System.Drawing.Size(50, 13)
-        DomicilioLabel.TabIndex = 7
-        DomicilioLabel.Text = "domicilio:"
-        '
         'DomicilioTextBox
         '
         Me.DomicilioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DatosBindingSource, "domicilio", True))
@@ -273,15 +292,6 @@ Partial Class Form1
         Me.DomicilioTextBox.Size = New System.Drawing.Size(100, 20)
         Me.DomicilioTextBox.TabIndex = 8
         '
-        'SexoLabel
-        '
-        SexoLabel.AutoSize = True
-        SexoLabel.Location = New System.Drawing.Point(44, 144)
-        SexoLabel.Name = "SexoLabel"
-        SexoLabel.Size = New System.Drawing.Size(32, 13)
-        SexoLabel.TabIndex = 9
-        SexoLabel.Text = "sexo:"
-        '
         'SexoTextBox
         '
         Me.SexoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DatosBindingSource, "sexo", True))
@@ -289,15 +299,6 @@ Partial Class Form1
         Me.SexoTextBox.Name = "SexoTextBox"
         Me.SexoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.SexoTextBox.TabIndex = 10
-        '
-        'Estado_civilLabel
-        '
-        Estado_civilLabel.AutoSize = True
-        Estado_civilLabel.Location = New System.Drawing.Point(44, 170)
-        Estado_civilLabel.Name = "Estado_civilLabel"
-        Estado_civilLabel.Size = New System.Drawing.Size(63, 13)
-        Estado_civilLabel.TabIndex = 11
-        Estado_civilLabel.Text = "estado civil:"
         '
         'Estado_civilTextBox
         '
